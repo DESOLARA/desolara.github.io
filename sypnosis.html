@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sypnosis and Title Page</title>
+<style>
+ body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('home-bg.jpg');
+    }
+
+    header {
+       background-image: url('banner.jpg');
+       position: absolute;
+       top: 30px;
+       left: 50px;  
+       right: 50px;
+       border: 3px solid black;
+       border-radius: 10px;
+       padding: 14px;
+       box-shadow: 0 0 50px 15px #000
+    }
+    
+       header h1 {
+       font-family: 'Old English Text MT', bold;
+       color: #000;
+       text-shadow: 0 0 15px #fff;
+       cursor: pointer;
+       text-align: center;
+
+    }
+
+      header h1:hover {
+      text-shadow: 0 0px 15px #450303;
+
+    }
+
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 5px solid #000; 
+      
+    }
+
+    td {
+      padding: 0px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+      footer {
+     family-font: 'Arial', mono-serif;
+     justify-content: space-between;
+     display: block;
+     text-align: center;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.7); 
+     padding: 10px 0;
+     border-top: 2px solid #000; 
+     transition: background-color 0.3s ease-in-out;
+   }
+
+      footer:hover {
+     background-color: rgba(0, 0, 0, 0.9); 
+   }
+
+      .back-to-home {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #8b0000; 
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease-in-out;
+      box-shadow: 0 4px 8px rgba(139, 0, 0, 0.3); 
+    }
+
+    .back-to-home:hover {
+      box-shadow: 0 8px 16px rgba(139, 0, 0, 0.5); 
+      transform: translateY(-2px); 
+    }
+
+      footer button { 
+       bottom: 100px;
+}
+</style>
+</head>
+<body>
+
+  <header><h1>SYPNOSIS and TITLE PAGE</h1></header>
+
+  <main>
+    <table>
+      <tr>
+        <td>
+          <img src="sypnosis.jpg" alt="Sypnosis">
+        </td>
+        <td>
+          <img src="titlepage.jpg" alt="Title Page">
+        </td>
+      </tr>
+    </table>
+
+
+  </main>
+
+  <footer style="text-align: center;">DESOLARA
+ <button class="back-to-home" onclick="goToHome()">Back to Home</button></footer>
+ <script>
+    function goToHome() {
+      window.location.href = 'desolara.html';
+    }
+  </script>
+</body>
+</html>

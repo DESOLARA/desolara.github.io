@@ -1,0 +1,351 @@
+/* General Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-image: url('banner.jpg');
+  position: absolute;
+  top: 30px;
+  left: 50px;  
+  right: 50px;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 0 50px 15px #000
+  
+}
+
+header h1 {
+  font-family: 'Old English Text MT', bold;
+  color: #000;
+  text-shadow: 0 0 15px #fff;
+  cursor: pointer;
+
+}
+
+header h1:hover {
+  text-shadow: 0 0px 15px #450303;
+
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body h3 {
+  font-family: 'Old English Text MT';
+  position: absolute;
+  border: 2px solid black;
+  background-color: rgb(136, 8, 8, 0.7);
+  top: 200px;
+  border-radius: 5px;
+  width: 300px;
+  height: 30px;
+  text-align: center;
+  padding: 4px;
+  animation: shadows 1.5s infinite;
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: #8c2626 0 0 10px;
+    box-shadow: 0px 0px 20px 10px #8c2626;
+  }
+  50% {
+    text-shadow: #781a1a 0 0 10px;
+    box-shadow: 0px 0px 20px 10px #781a1a;
+  }
+  75% {
+    text-shadow: #570a0a 0 0 10px;
+    box-shadow: 0px 0px 20px 10px #570a0a;
+  }
+  100% {
+    text-shadow: #450303 0 0 10px;
+    box-shadow: 0px 0px 20px 10px #450303;
+  }
+}
+
+body.desolara {
+  background-image: url('home-bg.jpg');
+}
+
+.wrapper {
+  height: 406px;
+  width: 350px;
+  border: 2px solid black;
+  position: relative;
+  /* 3D */
+  perspective: 1000px;
+  animation: shadows 1.5s infinite;
+  margin-top: 200px;
+  background-color: rgba(0, 8, 8, 0.4); 
+  border-radius: 5px;
+ 
+ 
+}
+.rotate {
+  animation: rotation 2s infinite linear;
+  position: relative;
+  border: 0;
+  margin-top: 45px;
+  
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes shadows {
+  0% {
+    text-shadow: #8c2626 0 0 10px;
+    box-shadow: 0px 0px 20px 10px #8c2626;
+  }
+  50% {
+    text-shadow: #781a1a 0 0 10px;
+    box-shadow: 0px 0px 20px 10px #781a1a;
+  }
+  75% {
+    text-shadow: #570a0a 0 0 10px;
+    box-shadow: 0px 0px 20px 10px #570a0a;
+  }
+  100% {
+    text-shadow: #450303 0 0 10px;
+    box-shadow: 0px 0px 20px 10px #450303;
+  }
+}
+
+.door {
+  background-image: url('doorbg.jpg');
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  /* inner layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+#left-door {
+  top: 0;
+  left: 0;
+  border-right: 2px solid black;
+  /* transition */
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+#right-door {
+  top: 0;
+  right: 0;
+  border-left: 2px solid black;
+  /* transition */
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.shape {
+  background-image: url('doorbg.jpg');
+}
+
+.knob {
+  width: 15px;
+  height: 60px;
+  border; 2px solid black;
+  background-color: #D7DADE;
+  position: absolute;
+}
+
+#left-knob {
+  top: 50%;
+  right: 10px;
+}
+
+#right-knob {
+  top: 50%;
+  left: 10px;
+}
+
+#door {
+  text-align: center; 
+}
+
+button {
+  font-family: 'Algerian', cursive;
+  padding: 188px 95px;
+  background: rgba(255, 0, 0, 0.1);
+  color: white;
+  border: 2 px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+ 
+}
+
+button:hover {
+  background-color: (255, 0, 0, 0.5);
+  
+}
+
+/* Door swing effect */
+.wrapper:hover #left-door{
+  transform: rotateY(-140deg);
+}
+
+.wrapper:hover #right-door{
+  transform: rotateY(140deg);
+}
+
+/* page 2 tour */
+
+body2 {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url('home-bg.jpg');
+}
+
+.slider-container {
+  position: absolute;
+  bottom: 30px;
+  left: 454px;
+  max-width: 600px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+
+.slider {
+  display: flex;
+  transition: transform 0.9s ease-in-out;
+  
+}
+
+img {
+  width: 100%;
+  border: 8px solid black;
+  box-sizing: border-box; 
+}
+
+nextbutton {
+  display: block;
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+nextbutton:hover {
+  color: #570a0a;
+   box-shadow: 0 0 50px 15px #570a0a
+
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff-;
+}
+
+.popup {
+  font-family: 'Times New Roman', cursive;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background: rgba( 0, 0, 0, 0.5);
+  margin-top: 50px;
+  text-align: center;
+  border: 6px solid black;
+  border-radius: 10px;
+  padding: 60px;
+  font-size: 18px;
+  animation: typewriter 2s steps(9999999999999999999999999999999999999999999999999999999999999999999999999) forwards;
+}
+
+body2 h2, body2 p {
+  color: #fff;
+
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 50%;
+    height: 40%
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* close modal */
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+  position: absolute;
+  background-image:  url('MTC.jpg');
+  top: 240px;
+  bottom: 30px;
+  right: 30px;
+  left: 1110px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: 4px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 50px 15px #570a0a
+}
+
+

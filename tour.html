@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Desolara - Tour </title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body2>
+<header> <h1>Take a Tour___________________________________________________________DESOLARA</h1> </header>	
+
+<div class="slider-container">
+  <div class="slider">
+    <img src="image1.jpg">
+    <img src="image2.jpg">
+    <img src="image3.jpg">
+  </div>
+
+  <nextbutton class="prev" onclick="changeSlide(-1)">Previous</nextbutton>
+  <nextbutton class="next" onclick="changeSlide(1)">Next</nextbutton>
+</div>
+
+
+
+<div class="overlay" id="overlay">
+  <div class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <h2 id="popup-title"></h2>
+    <p id="popup-description"></p>
+  </div>
+</div>
+<script src="script.js"></script>
+<button onclick="location.href='characters.html'">Meet The Characters</button> 
+</body2>
+</html>

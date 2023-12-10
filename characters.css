@@ -1,0 +1,157 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('home-bg.jpg');
+
+}
+
+header { 
+  background-image: url('banner.jpg');
+  position: absolute;
+  top: 30px;
+  left: 50px;  
+  right: 50px;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 0 50px 15px #000
+
+}
+
+header h1 {
+  font-family: 'Old English Text MT', bold;
+  color: #000;
+  text-shadow: 0 0 15px #fff;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+header h1:hover {
+  text-shadow: 0 0px 15px #450303;
+}
+
+.character {
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  margin: 10px;
+}
+
+.character img {
+  max-width: 100%;
+  max-height: 100%;
+ transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.character:hover {
+  transform: scale(1.1); 
+   box-shadow: 0 0 10px white; 
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease-in-out; 
+  overflow-y: auto; 
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+.popup-content {
+  margin-top: 20px;
+}
+
+.character-pictures {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  
+}
+
+.picture-cell {
+  text-align: center;
+}
+
+.picture-cell img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.close:hover {
+  color: red;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 10px 0;
+  border-top: 2px solid #000; 
+  transition: background-color 0.3s ease-in-out;
+}
+
+footer:hover {
+  background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.go-to-synopsis {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #8b0000; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(139, 0, 0, 0.9);
+}
+
+.go-to-synopsis:hover {
+  box-shadow: 0 8px 16px rgba(139, 0, 0, 0.9); 
+  transform: translateY(-2px); 
+}

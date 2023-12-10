@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desolara - Characters</title>
+  <link rel="stylesheet" href="characters.css">
+</head>
+<body>
+<header> <h1> Meet The Characters <h1> </header>
+
+  <div class="character" id="character1" onclick="showPopup('EVELYN', 'Evelyn is a resilient and resourceful scavenger in her late twenties, navigating the desolate landscapes of the dystopian world. Her dark, weathered clothing and a cloak made of scavenged materials provide camouflage in the shadows.', 1)">
+    <img src="character1.jpg">
+    <p>Evelyn</p>
+  </div>
+
+  <div class="character" id="character2" onclick="showPopup('CIPHER', 'Cipher is a mysterious hacker and information broker with an enigmatic presence. Cipher thrives in the underground, dealing in secrets and encrypted data.', 2)">
+    <img src="character2.jpg">
+    <p>Cipher</p>
+  </div>
+
+  <div class="character" id="character3" onclick="showPopup('LUNA', 'Luna is a charismatic and rebellious leader in her early thirties, rallying a group of resistance fighters against the oppressive regime. Her vibrant red hair, adorned with tribal tattoos, symbolizes her defiance.', 3)">
+    <img src="character3.jpg">
+    <p>Luna</p>
+  </div>
+
+  <div class="character" id="character4" onclick="showPopup('SILAS', 'Silas is a stoic and battle-hardened ex-soldier, haunted by the memories of a war that shaped the dystopian landscape. Despite his gruff exterior, Silas is known for his unwavering loyalty to those he trusts and his skills with a modified energy rifle.', 4)">
+    <img src="character4.jpg">
+    <p>Silas</p>
+  </div>
+
+
+  <div class="overlay" id="overlay">
+    <div class="popup">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <div class="popup-content">
+        <h2 id="popup-title"></h2>
+        <p id="popup-description"></p>
+        <div class="character-pictures" id="character-pictures">
+        </div>
+      </div>
+    </div>
+  </div>
+
+<footer>
+  <button class="go-to-synopsis" onclick="goToSynopsis()">
+    Go to Synopsis
+    <span class="arrow">&#10140;</span>
+  </button>
+</footer>
+
+
+  <script src="characters.js"></script>
+</body>
+</html>
